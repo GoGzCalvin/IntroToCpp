@@ -401,7 +401,7 @@ int main()
 		dinoScore + 1;
 	}
 
-	else if (rateStrength < 4)
+	else if (rateStrength > 4)
 	{
 		cout << "Your're stronger than the Dino." << endl;
 			playerScore + 1;
@@ -414,18 +414,147 @@ int main()
 		dinoScore + 0;
 	}
 	
+	//RPS Dino
 	int playerChoice;
 	cout << "Which of the following do you take into battle? \n 1.) A sack of potatoes \n 2.) An invisibility cape \n 3.) The Mango Blade \n";
 	cin >> playerChoice;
 
-	if (playerChoice = 1)
+	if (playerChoice == 1)
 	{
 		cout << "You've been beaten by the dino's invisibility cape." << endl;
 		dinoScore + 1;
 	}
 
-	else if ()
+	else if (playerChoice == 2)
+	{
+		cout << "You both went invisible, nothing happens..." << endl;
+		dinoScore + 0;
+		playerScore + 0;
+	}
+
+	else if (playerChoice == 3)
+	{
+		cout << "You've beaten the dino's invisibility cape." << endl;
+		playerScore + 1;
+	}
+
+	//Battles Fought
+
+	int playerBattles;
+	int dinoBattles = 2;
+	cout << "How many battles have you fought?";
+	cin >> playerBattles;
+
+	if (playerBattles < dinoBattles)
+	{
+		cout << "You're not as experienced as the dino." << endl;
+		dinoScore + 1;
+	}
+
+	else if (playerBattles = dinoBattles)
+	{
+		cout << "You both have equal experience" << endl;
+		dinoScore + 0;
+		playerScore + 0;
+	}
+
+	else if (playerBattles > dinoBattles)
+	{
+		cout << "You're more experienced than the dino." << endl;
+		playerScore + 1;
+	}
+
+	// Enough Sleep?
+	char playerSleep;
+	cout << "Did you get enough sleep? [y/n]?";
+	cin >> playerSleep;
+
+	if (playerSleep == 'y')
+	{
+		cout << "You both got enough sleep 1 point for each of you!" << endl;
+		dinoScore + 1;
+		playerScore + 1;
+	}
+
+	else if (playerSleep == 'n')
+	{
+		cout << "The dino got more sleep than you." << endl;
+		dinoScore + 1;
+	}
+
+	// Vitamin C
+	int playerVitamin;
+	cout << "How much Vitamin C do you get everyday? (mg)";
+	cin >> playerVitamin;
+
+	if (playerVitamin < 75)
+	{
+		cout << "You need more Vitamin C!" << endl;
+		dinoScore + 1;
+	}
+
+	else if (playerVitamin >= 75)
+	{
+		cout << "You consume enough Vitamin C!" << endl;
+		playerScore + 1;
+	}
+	
+	if (playerVitamin > 75 && playerChoice == 3)
+	{
+		cout << "You are the legendary Vitamin C warrior you gain a point!" << endl;
+		playerScore + 1;
+	}
+
+	// Gamer?
+	char playerGamer;
+	cout << "Are you a gamer? [y/n]";
+	cin >> playerGamer;
+
+	if (playerGamer == 'y')
+	{
+		cout << "You're just straight up cool, have a point." << endl;
+		playerScore + 1;
+	}
+
+	if (playerGamer == 'n')
+	{
+		cout << "You're just plain boring..." << endl;
+		dinoScore + 1;
+	}
+
+	// Solar Eclipse
+	char playerOpinion;
+	cout << "Did you think the solar eclipse was beautiful? [y/n]";
+	cin >> playerOpinion;
+
+	if (playerOpinion == 'y')
+	{
+		cout << "You know what beauty is." << endl;
+		playerScore + 1;
+	}
+
+	if (playerOpinion == 'n')
+	{
+		cout << "How did you not..." << endl;
+		dinoScore + 1;
+	}
 	// ... 
+
+	//View Score?
+	char scoreTotal;
+	cout << "Would you like to see who won? [y/n]";
+	cin >> scoreTotal;
+
+	if (scoreTotal == 'y')
+	{
+		cout << "Player Score: " << playerScore  << "Dino Score: " << dinoScore  << endl;
+	}
+
+	if (scoreTotal == 'n')
+	{
+		cout << "This was pointless..." << endl;
+	}
+
 
 
 	// Walkthrough
