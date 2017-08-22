@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 // Gives a squared number
@@ -120,20 +121,79 @@ void Greater()
 // Clamp
 void Clamp()
 {
-	int con1;
-	int con2;
+	int clamp;
+	int clamp2;
+	int restricted;
 
-	cout << ""
+	cout << "Choose two numbers and create a range. ";
+	cin >> clamp >> clamp2;
+
+	cout << "Choose a number that ranges between the two chosen numbers. ";
+	cin >> restricted;
+
+	if (restricted < clamp)
+	{
+		cout << " Your number is: " << clamp << endl;
+	}
+
+	else if (restricted > clamp2)
+	{
+		cout << " Your number is: " << clamp2 << endl;
+	}
+
+	else
+	{
+		cout << " Your number is: " << restricted << endl;
+	}
+
 }
+
+// Distance
+void Distance()
+{
+	float x1;
+	float x2;
+	float y1;
+	float y2;
+	cout << "Choose a point on a graph. ";
+	cin >> x1 >> y1;
+
+	cout << "Choose a second point on a graph. ";
+	cin >> x2 >> y2;
+
+	cout << "Your distance is: " << sqrtf((powf(x2 - x1, 2.0)) + (powf(y2 - y1, 2.0))) << endl;
+}
+
+// Estimated Time of Arrival
+void Estimate()
+{
+	float x1;
+	float x2;
+	float y1;
+	float y2;
+	float speed;
+	cout << "Choose a point on a graph. ";
+	cin >> x1 >> y1;
+
+	cout << "Choose a second point on a graph. ";
+	cin >> x2 >> y2;
+
+	float distance = sqrtf((powf(x2 - x1, 2.0)) + (powf(y2 - y1, 2.0)));
+}
+
+
+
 int main()
 {
-	HelloWorld();
-	Squared();
-	Decimal();
-	Comma();
-	Sum();
-	Lesser();
-	Greater();
+//	HelloWorld();
+//	Squared();
+//	Decimal();
+//	Comma();
+//	Sum();
+//	Lesser();
+//	Greater();
+//	Distance();
+//	Clamp();
 
 
 	system("pause");
