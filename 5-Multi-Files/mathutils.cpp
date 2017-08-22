@@ -1,16 +1,12 @@
 #include <iostream>
 #include "mathutils.h"
 
+
 using namespace std;
 
-// Returns the lesser of two integers.
-int min(int a, int b);
 
-// Returns the greater of two integers.
-int max(int a, int b);
+int min(int a, int b)
+{
+	return 
+}
 
-// Returns a value clamped within a range.
-int clamp(int lower, int upper, int value);
-
-// Returns the distance between two points.
-float dist(float x1, float y1, float x2, float y2);
