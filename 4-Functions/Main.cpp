@@ -179,22 +179,29 @@ void Estimate()
 	cin >> x2 >> y2;
 
 	float distance = sqrtf((powf(x2 - x1, 2.0)) + (powf(y2 - y1, 2.0)));
+	
+	cout << "Input speed to determine the time from one point to another. ";
+	cin >> speed;
+
+	cout << "Seconds it takes to get from Point A to Point B: " << (distance / speed) << endl;
+
+
 }
 
 
 
 int main()
 {
-//	HelloWorld();
-//	Squared();
-//	Decimal();
-//	Comma();
-//	Sum();
-//	Lesser();
-//	Greater();
-//	Distance();
-//	Clamp();
-
+	HelloWorld();
+	Squared();
+	Decimal();
+	Comma();
+	Sum();
+	Lesser();
+	Greater();
+	Distance();
+	Clamp();
+	Estimate();
 
 	system("pause");
 	return 0;
