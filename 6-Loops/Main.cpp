@@ -1,23 +1,156 @@
 #include <iostream>
+#include <random>
 
 using namespace std;
+// Prompts the user for one or more guesses for a generated number.
+void guessTheNumber(int lower, int upper, int tryCount)
+{
+	int randomNumber = rand() % upper + lower;
+	int rounds = tryCount;
+	int input = 99;
+	for (int i = 0; i < tryCount; i++)
+	{
+		cout << randomNumber;
+		cout << "Hello! I'm going to generate a number between 1 and 10. \n You have "<< rounds << " tries to guess the number!";
+		cin >> input;
+
+		if (input < randomNumber )
+		{
+			cout << "Your guess was too low. " << endl;
+		}
+
+		else if (input > randomNumber)
+		{
+			cout << "Your guess was too high. " << endl;
+		}
+
+		else if (input == randomNumber)
+		{
+			cout << "You guessed the number! " << endl;
+			break;
+		}
+		rounds--;
+	}
+
+}
+
+// Prints out a grid of characters with the specified dimensions.
+void gridGen(int width, int height)
+{
+
+	cout << "Enter a value for 'width' and 'height'. ";
+	cin >> width >> height;
+
+	for(int w = 0; w < width; ++w )
+	{
+		cout << endl;
+
+		for(int h = 0; h < height; ++h)
+		{
+			cout << "x";
+		}
+	}
+
+}
+
+
+// Prints out “Fizz” when a multiple of three and “Buzz” when a multiple of five.
+// If both are true, then both texts are printed.
+void fizzBuzz(int start, int end)
+{
+	cout << " \n Enter a range for a 'start' value and a 'end' value. ";
+	cin >> start >> end;
+
+	for (start; start <= end; ++start)
+	{
+		if (start % 5 == 0 && start % 3 == 0)
+		{
+
+			cout << "FizzBuzz" << endl;
+		}
+
+		else if (start % 5 == 0)
+		{
+			cout << "Buzz" << endl;
+		}
+		
+		else if (start % 3 == 0)
+		{
+			cout << "Fizz" << endl;
+		}
+
+		else
+		{
+			cout << start << endl;
+		}
+	}
+}
+
+
+// Prints out “even” or “odd” for a given range of numbers.
+void EvenOrOdd(int start, int end)
+{
+	cout << "Enter a range for a 'start' value and a 'end' value. ";
+	cin >> start >> end;
+
+	for (start; start <= end; ++start)
+	{
+		if (start % 2 == 0)
+		{
+
+			cout << "Even" << endl;
+		}
+
+		else if (start % 2 != 0)
+		{
+			cout << "Odd" << endl;
+		}
+	}
+}
 
 
 // Prompts the user for a number of numbers and returns the largest of them all.
 int promptLargest(int qtyRequested)
 {
 	int max = INT_MIN;
-	int input;
-	cout << "Enter how many numbers you wish to use. ";
-	cin >> input;
+	int input = 0;
+	
 
-	for (input; input <= qtyRequested; qtyRequested)
+	for (int i = 0; i < qtyRequested; i++)
+	{
+		cout << "Enter the numbers you wish to use. ";
+		cin >> input;
 	if (input > max)
 	{
 		max = input;
 	}
+	}
+
+	
 
 	return max;
+}
+
+// Prompts the user for a number of numbers and returns the smallest of them all.
+int promptSmallest(int qtyRequested)
+{
+	int min = INT_MAX;
+	int input = 0;
+
+
+	for (int i = 0; i < qtyRequested; i++)
+	{
+		cout << "Enter how many numbers you wish to use. ";
+		cin >> input;
+		if (input < min)
+		{
+			min = input;
+		}
+	}
+
+
+
+	return min;
 }
 
 // Prints all numbers from x to y, inclusive of both ends.
@@ -34,8 +167,13 @@ void printXY(int start, int end)
 
 int main()
 {
-	int l = 3;
-	promptLargest(3);
+	guessTheNumber(1, 10, 3);
+	gridGen(1, 8);
+	fizzBuzz(0, 0);
+	EvenOrOdd(0, 0);
+
+	cout << "MIN: " << promptSmallest(3) << endl;
+	cout << "MAX: " << promptLargest(3) << endl;
 
 	int x = 0;
 	int y = 0;
