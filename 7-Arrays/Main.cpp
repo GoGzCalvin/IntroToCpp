@@ -14,7 +14,7 @@ void arrayNumbers(int numbers[], int quantity)
 // Returns the sum of all numbers in the array.
 //  - numbers is the array of integers
 //  - size is the number of elements in the array
-int sumNumbers(int sumArray[], int size)
+int sumOfNumbers(int sumArray[], int size)
 {
 	int a, sum;
 
@@ -36,7 +36,7 @@ int sumNumbers(int sumArray[], int size)
 //  - size is the number of elements in the array
 int smallestValue(int numbers[], int size)
 {
-	int numbers[] = {1, 2, 3, 4, 5};
+	int smallNumbers[] = {1, 2, 3, 4, 5};
 
 	int smallest = INT_MAX;
 	for (int i = 0; i < size; i++) 
@@ -52,9 +52,9 @@ int smallestValue(int numbers[], int size)
 // Returns the largest number of the entire array.
 //  - numbers is the array of integers
 //  - size is the number of elements in the array
-int largestValue(int numbers[], int size); 
+int largestValue(int numbers[], int size) 
 {
-	int numbers[] = {1, 2, 3, 4, 5};
+	int bigNumbers[] = {1, 2, 3, 4, 5};
 
 	int largest = INT_MIN;
 	for (int i = 0; i < size; i++) 
@@ -68,12 +68,12 @@ int largestValue(int numbers[], int size);
 }
 
 
-int main
+int main()
 {
-	int array[]{ 12, 18, 4, 7, 5, 9};
+	int array[] = {12, 18, 4, 7, 5, 9};
 
 	// Prints Numbers
-	sumNumbers(sumArray, 5);
+	sumOfNumbers(sumArray, 5);
 
 	system("pause");
 	return 0;

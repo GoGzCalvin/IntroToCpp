@@ -6,12 +6,13 @@ struct piggybank
 {
 	int oneDollarBills;
 	int twoDollarBills;
-	int fiveDllarBills;
+	int fiveDollarBills;
 	int quarters;
 	int dimes;
 	int nickels;
 	int pennies;
 };
+
 // Returns the total monetary value of all dollar bills.
 float calcPiggybankNotes(piggybank piggy);
 
