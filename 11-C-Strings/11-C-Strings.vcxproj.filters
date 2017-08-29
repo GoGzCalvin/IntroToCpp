@@ -23,5 +23,8 @@
     <ClInclude Include="Lesson.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="palindrome.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
